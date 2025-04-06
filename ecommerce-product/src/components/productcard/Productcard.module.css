@@ -1,0 +1,99 @@
+.productCard {
+    position: relative;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 300px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ff4757;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .productTitle {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #2f3542;
+  }
+  
+  .imageContainer {
+    margin: 1rem 0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .productImage {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .description {
+    color: #57606f;
+    font-size: 0.9rem;
+    margin: 0.75rem 0;
+    line-height: 1.4;
+  }
+  
+  .pricing {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .currentPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ed573;
+  }
+  
+  .oldPrice {
+    font-size: 1rem;
+    color: #a4b0be;
+    text-decoration: line-through;
+  }
+  
+  .addButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3742fa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .addButton:hover {
+    background-color: #5352ed;
+  }
+  
+  .addIcon {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
