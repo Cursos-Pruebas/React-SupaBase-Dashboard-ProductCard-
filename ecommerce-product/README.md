@@ -1,12 +1,102 @@
-# React + Vite
+# 💠 Admin Panel con Supabase + React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a este proyecto de **Panel de Administración** para gestionar productos, imágenes y más funciones comerciales. Está desarrollado en **React** con **Vite**, conectado a una base de datos en **Supabase** y diseñado para escalar a múltiples tiendas 🚀
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características actuales
 
-## Expanding the ESLint configuration
+- ✅ **Carga de productos con imágenes** subidas a Supabase Storage
+- ✅ **CRUD completo** (Crear, Leer, Editar, Eliminar)
+- ✅ Refrescado automático del listado luego de guardar un producto
+- ✅ Manejo de estado con `useState` y `useEffect`
+- ✅ Estilo con CSS tradicional (no CSS Modules)
+- ✅ Preparado para extender con nuevas secciones como:
+  - Gestión de texto e imágenes del sitio
+  - Administración de ventas
+  - Control de stock
+  - Panel por tienda con base de datos aislada
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Tecnologías utilizadas
+
+| Herramienta    | Descripción                                |
+| -------------- | ------------------------------------------ |
+| ⚛️ React       | Librería para construir interfaces         |
+| ⚡ Vite         | Bundler ultrarrápido                       |
+| 🐘 Supabase    | Backend as a Service (DB + Auth + Storage) |
+| 🧪 React Icons | Iconografía moderna y amigable             |
+| 🎨 CSS         | Estilo base sin módulos                    |
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+📆 src/
+🔹 components/
+│   🔹 AdminPanel.jsx     # Componente principal del panel
+│   🔹 ProductCard.jsx    # (opcional para mostrar productos)
+🔹 styles/
+│   🔹 admin.css          # Estilos globales del panel
+🔹 supabase/
+│   🔹 client.js          # Conexión con Supabase
+🔹 App.jsx                # Punto de entrada principal
+```
+
+---
+
+## 📷 Subida de imágenes
+
+Las imágenes de los productos se cargan automáticamente a Supabase Storage. Una vez subida la imagen, se obtiene la URL pública y se guarda junto con el resto del producto en la tabla `products`.
+
+> ⚠️ Requiere configuración previa del **bucket** en Supabase y permisos de lectura pública o firma temporal.
+
+---
+
+## ⚙️ Configuración
+
+1. Clonar el repo:
+
+```bash
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+cd nombre-del-repo
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Crear un archivo `.env` con tus claves de Supabase:
+
+```env
+VITE_SUPABASE_URL=https://tu-url.supabase.co
+VITE_SUPABASE_KEY=tu-clave-publica
+```
+
+4. Ejecutar en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+---
+
+---
+
+## 🤝 Contribuciones
+
+Este proyecto está siendo desarrollado con 💡 ideas en tiempo real, así que toda mejora, sugerencia o colaboración ¡es más que bienvenida!
+
+---
+
+## 🧠 Lecciones aprendidas
+
+- Parar un rato ayuda a resolver errores 😉
+- Siempre validar los IDs antes de insertar
+- Evitar campos innecesarios como `id: null`
+- Usar `location.reload()` después de guardar es útil, pero puede mejorarse con optimización de estado
+
